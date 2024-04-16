@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>countdown</title>
+    <link rel="stylesheet" href="count.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Enter Date</th>
+                    <th>Enter Time</th>
+                </tr>
+            </thead>
+            <tr>
+                <td><input type="date" id="date"></td>
+                <td><input type="time" id="time"></td>
+            </tr>
+        </table>
+        <button id="Calculate">Calculate</button>
+        <button>Stop</button>
+        <button>Reset</button>
+    </div>
+    <div class="count">
+        <p>DAY</p>
+        <div>0 </div>
+    </div>
+    <div class="hou">
+        <p>HOURS</p>
+        <div>0 </div>
+    </div>
+    <div class="min">
+        <p>MINUTS</p>
+        <div>0 </div>
+    </div>
+    <div>
+        <p>SECONDS</p>
+        <div>0 </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    window.onload = () => {
+        document.querySelector("#Calculate").onclick = Calculate;
+
+    }
+    function Calculate() {
+
+
+        const date = document.querySelector('#date').Value;
+        const time = document.querySelector('#time').Value;
+
+        const endTime = new date(date + " " + time);
+        setInterval(() => Calculatetime(endTime), 1000);
+
+
+
+    }
+    function Calculatetime() {
+        const currentTime = new Date();
+
+    }
+</script>
+
+</html>

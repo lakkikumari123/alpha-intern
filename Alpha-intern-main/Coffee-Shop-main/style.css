@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta", sans-serif;
+}
+.mainhome{
+    height: 100vh;
+    background: url(Images/coffee6.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar{
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-btn{
+    display: none;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    padding-right: 5px;
+}
+
+#close-btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.navbar .menu{
+    display: flex;
+    gap: 42px;
+    position: fixed;
+    right: 50px;
+}
+
+.navbar .logo{
+    font-size: 37px;
+    font-weight: 600;
+}
+
+.navbar a:hover{
+    color: #c3581f;
+}
+.navbar ul{
+    list-style-type: none;
+}
+
+.main-section{
+    height: 100vh;
+    display: flex;
+    float: right;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.main-section .content{
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-section .content h1{
+    font-size: 50px;
+    max-width: 600px;
+}
+
+.main-section .content p{
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.main-section .content button{
+    background-color: white;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    padding: 7px 20px;
+    font-weight: 500;
+    margin-top: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.main-section .content button:hover{
+    color: white;
+    background-color: #c3581f;
+}
+
+@media screen and (max-width: 900px) {
+    header.mobile-menu-btn::before{
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+    }
+
+    #close-btn{
+        display: block;
+    }
+    #menu-btn{
+        display: block;
+    }
+
+    .navbar .menu{
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: 260px;
+        height: 100vh;
+        background-color: white;
+        padding: 70px 40px 0;
+        transition: left 0.15s ease;
+    }
+
+    header.mobile-menu-btn .navbar .menu{
+        left: 0;
+    }
+
+    .navbar a{
+        color: black;
+    }
+}
+
+#about{
+    height: 100vh;
+    background: url(Images/CoffeeAbout.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.aboutContent{
+    color: white;
+    position: relative;
+    top: 230px;
+    left: 40px;
+    max-width: 500px;
+}
+.aboutContent button{
+    position: relative;
+    top: 20px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: max-content;
+    font-weight: 600;
+    transition: 0.2s ease;
+    margin-right: 20px;
+}
+.aboutContent button:hover{
+    background-color: #c3581f;
+    color: white;
+    cursor: pointer;
+}
+
+#item{
+    height: 100vh;
+    background: url(Images/coffeemenu.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.itemContent h1, .blogContent h1{
+    position: relative;
+    top: 79px;
+    color: white;
+    text-align: center;
+}
+
+.coffeeImage{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+
+.coffeeImage img{
+    width: 350px;
+    height: 300px;
+    margin: auto;
+}
+
+.coffeeImage h2{
+    color: white;
+}
+
+.coffeeImage p{
+    max-width: 350px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#review{
+    height: 100vh;
+    background: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.reviewCustomer{
+    margin: 10px auto;
+    border: 3px solid white;
+    padding: 10px;
+    border-radius: 19px;
+    gap: 15px;
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    color: white;
+    top: 120px;
+}
+
+
+
+.reviewCustomer button{
+    border-radius: 10px;
+    padding: 2px 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reviewCustomer button:hover{
+    background-color: gray;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator</title>
+    <link rel="stylesheet" href="tipstyle.css">
+</head>
+
+<body>
+    <div>
+    </div>
+    <div class="calculator">
+        <h2 style="background-color: dimgrey;">TipCalculator</h2>
+        <div class="display">
+            <input type="text" id="result" disabled>
+
+        </div>
+        <div class="button">
+            <button onclick="clearResult()">Ac</button>
+            <button onclick="Deleteresult()">Del</button>
+            <button onclick="insertValue('%')">%</button>
+            <button onclick="insertValue('/')">/</button>
+            <button onclick="insertValue('7')">7</button>
+            <button onclick="insertValue('8')">8</button>
+            <button onclick="insertValue('9')">9</button>
+            <button onclick="insertValue('*')">*</button>
+            <button onclick="insertValue('4')">4</button>
+            <button onclick="insertValue('5')">5</button>
+            <button onclick="insertValue('6')">6</button>
+            <button onclick="insertValue('-')">-</button>
+            <button onclick="insertValue('1')">1</button>
+            <button onclick="insertValue('2')">2</button>
+            <button onclick="insertValue('3')">3</button>
+            <button onclick="insertValue('+')">+</button>
+            <button onclick="insertValue('00')">00</button>
+            <button onclick="insertValue('0')">0</button>
+            <button onclick="insertValue('.')">.</button>
+            <button class="ege" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        let result = document.getElementById('result');
+        function insertValue(value) {
+            result.value += value;
+        }
+        function clearResult() {
+            result.value = '';
+
+        }
+        function Deleteresult() {
+            result.value = result.value.slice(0, -1);
+        }
+
+
+        function calculate() {
+            try {
+                result.value = eval(result.value);
+            }
+            catch (error) {
+                result.value = "error";
+
+            }
+        }
+    </script>
+</body>
+
+</html>
